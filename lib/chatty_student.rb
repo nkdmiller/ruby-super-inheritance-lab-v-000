@@ -4,8 +4,12 @@ class ChattyStudent < Student
     puts "How are you doing today? I'm okay, but I'm kind of tired. Did you watch The Walking Dead last night? You didn't?! Oh man, it was so crazy! What, you don't want any spoilers? Okay well let me just tell you who died..."
   end
   def pick_me
-    10.times do
+    loop do
+      counter += 1
       super
+      if counter >= 10
+        break
+      end
     end
   end
 end
